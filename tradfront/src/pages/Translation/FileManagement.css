@@ -1,0 +1,61 @@
+/* src/pages/Translation/FileManagement.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  label {
+    margin-bottom: 8px;
+  }
+  
+  input[type="file"] {
+    margin-bottom: 16px;
+  }
+  
+  button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 8px;
+  }
+  
+  .file-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .file-item span {
+    margin-left: 8px;
+  }
+  
+  .delete-button {
+    color: #e74c3c;
+    cursor: pointer;
+    margin-left: 8px;
+  }
+  

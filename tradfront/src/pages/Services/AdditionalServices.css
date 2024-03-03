@@ -1,0 +1,22 @@
+/* src/pages/Services/AdditionalServices.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  div {
+    margin-bottom: 20px;
+  }
+  
+  h3 {
+    color: #4caf50;
+  }
+  
+  p {
+    color: #666;
+  }
+  

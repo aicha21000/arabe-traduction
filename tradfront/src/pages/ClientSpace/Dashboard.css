@@ -1,0 +1,11 @@
+/* src/pages/ClientSpace/Dashboard.css */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #333;
+  }
+  
+  

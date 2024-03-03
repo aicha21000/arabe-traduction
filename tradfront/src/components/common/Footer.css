@@ -1,0 +1,18 @@
+/* src/components/common/Footer.css */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+  }
+  
+  footer p {
+    margin: 0;
+  }
+  
+  @media (max-width: 768px) {
+    footer {
+      padding: 20px 0;
+    }
+  }
+  

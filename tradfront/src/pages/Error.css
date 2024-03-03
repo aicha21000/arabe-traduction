@@ -1,0 +1,15 @@
+/* src/pages/Error.css */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  h2 {
+    color: #e74c3c;
+  }
+  
+  p {
+    color: #888;
+  }
+  
