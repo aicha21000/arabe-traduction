@@ -1,12 +1,10 @@
-
 // middlewares/authMiddleware.js
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 
-// Charger les variables d'environnement depuis le fichier .env
 dotenv.config();
 
-// Middleware pour vérifier le token JWT
+
 exports.verifyToken = (req, res, next) => {
   const token = req.headers.authorization;
 

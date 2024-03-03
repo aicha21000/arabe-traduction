@@ -5,3 +5,5 @@ tradback/node_modules/
 tradfront/node_modules/
 
 tradback/.env
+
+tradback/uploads/

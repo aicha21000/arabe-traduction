@@ -2,7 +2,6 @@
 const Order = require('../models/Order');
 const path = require('path');
 
-// Contrôleur pour gérer la demande de traduction
 exports.requestTranslation = async (req, res) => {
   try {
     console.log('Handling translation request...');
@@ -28,14 +27,11 @@ exports.requestTranslation = async (req, res) => {
   }
 };
 
-// Contrôleur pour obtenir tous les services de traduction
 exports.getAllTranslationServices = async (req, res) => {
   try {
-    // Vous pouvez récupérer les services de traduction depuis la base de données ou les définir ici
     const translationServices = [
       { name: 'Page Translation', description: 'Translation of a single page document' },
       { name: 'Document Translation', description: 'Translation of longer documents' },
-      // Ajoutez plus de services au besoin
     ];
     res.status(200).json(translationServices);
   } catch (error) {
