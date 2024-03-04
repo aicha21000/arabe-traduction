@@ -1,6 +1,8 @@
 // controllers/clientSpaceController.js
 const User = require('../models/User');
 const Order = require('../models/Order');
+const path = require('path');
+const fs = require('fs');
 
 exports.getUserOrders = async (req, res) => {
   try {
@@ -79,5 +81,27 @@ exports.cancelOrder = async (req, res) => {
   }
 };
 
+exports.downloadFile = async (req, res) => {
+  try {
+    const { orderId } = req.params;
 
+    const order = await Order.findById(orderId);
+    if (!order) {
+      return res.status(404).json({ error: 'Order not found' });
+    }
+
+    const filePath = path.join(__dirname, `../${order.document}`);
+    const fileName = path.basename(filePath);
+
+    const fileStream = fs.createReadStream(filePath);
+
+    res.setHeader('Content-Type', 'application/octet-stream');
+    res.setHeader('Content-Disposition', `attachment; filename=${fileName}`);
+
+    fileStream.pipe(res);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Internal Server Error' });
+  }
+};
 

@@ -25,7 +25,7 @@ function Login() {
       const response = await axios.post('http://localhost:5000/auth/login', formData);
       localStorage.setItem('token', response.data.token);
       localStorage.setItem('userId', response.data.user.userId);
-      window.location.href = '/client-space';
+      window.location.href = '/translation';
 
     } catch (error) {
       console.error('Login error:', error.response.data);

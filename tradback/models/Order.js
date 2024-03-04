@@ -16,11 +16,28 @@ const orderSchema = new mongoose.Schema({
     required: true,
   },
   document: {
-    type: String, // Path to the uploaded document
+    type: String,
     required: true,
   },
   additionalMessage: String,
-
+  numberOfPages: {
+    type: Number,
+    default: 1,
+  },
+  price: {
+    type: Number,
+    default: 25,
+  },
+  deliveryTime: {
+    type: String,
+    enum: ['normal', 'urgent_48h', 'very_urgent_24h'],
+    default: 'normal',
+  },
+  deliveryMethod: {
+    type: String,
+    enum: ['postal', 'mail'],
+    default: 'mail',
+  },
   createdAt: {
     type: Date,
     default: Date.now,
